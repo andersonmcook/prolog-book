@@ -15,5 +15,7 @@
 - `:- use_module(library(clpfd)).` -> use the clpfd library
 - `[A, B] ins 0..7` -> `A` and `B` are between 0 and 7, inclusive (imported from `clpfd`)
 - `f(X):- g(X).` -> defines rule
-- `=:=` -> equals
-- `=/=` -> not equals
+- `=:=` -> equals for integers
+- `=\=` -> not equals for integers
+- `==` -> equals
+- `\==` -> not equals
