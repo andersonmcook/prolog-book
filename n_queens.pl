@@ -13,9 +13,9 @@ safe(QueenA, QueenB) :- \+ attack(QueenA, QueenB).
 
 % Solution
 
-queens(Queens) :-
-  length(Queens, 8),
-  Queens ins 1..8,
+queens(Queens, N) :-
+  length(Queens, N),
+  Queens ins 1..N,
   all_different(Queens),
   safe(Queens).
 
