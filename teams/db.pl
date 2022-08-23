@@ -22,6 +22,12 @@ different_teams((A, B), (C, D)) :-
   dif(B, C),
   dif(B, D).
 
+schedule(Final) :-
+  potential_matches(PM),
+  schedule([], PM, Scheduled, 1),
+  reverse(Scheduled, Final),
+  !.
+
 % Acc, PotentialMatches, Scheduled, Day
 schedule(Scheduled, [], Scheduled, _).
 schedule(Acc, PotentialMatches, Scheduled, Day) :-
